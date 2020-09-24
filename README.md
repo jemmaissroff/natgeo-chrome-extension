@@ -1,4 +1,4 @@
-# National Geographic Photo of the Day Chrome Extension
+# National Geographic photo of the day chrome extension
 
 This is a chrome extension to display the National Geographic [photo of the day](https://www.nationalgeographic.com/photography/photo-of-the-day) every time a new tab is opened.
 
