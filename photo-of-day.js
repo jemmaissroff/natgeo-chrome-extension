@@ -1,8 +1,8 @@
 chrome.storage.sync.get('date', function(result) {
 	// Checks if date is unset, or the previous day, in which case will
 	// pull the image source from nat geo
-	if (result['date'] != (new Date().toISOString().slice(0, 10))) {
-		var date = new Date().toISOString().slice(0, 10)
+	var date = new Date().toISOString().slice(0, 10)
+	if (result['date'] != date) {
 		chrome.storage.sync.set({ 'date' : date }, function() {})
 
 		fetch('https://www.nationalgeographic.com/photography/photo-of-the-day/')
