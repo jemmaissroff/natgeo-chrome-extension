@@ -2,7 +2,7 @@
     "name": "National Geographic Background",
     "version": "1.0",
     "description": "Set the background on a new tab to the photo of the day!",
-    "permissions": ["storage", "tabs"],
+    "permissions": ["storage"],
     "chrome_url_overrides": {
       "newtab": "photo-of-day.html"
     },
