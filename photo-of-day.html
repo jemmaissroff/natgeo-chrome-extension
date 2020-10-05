@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html>
-<style>
+	<head>
+		<script src="photo-of-day.js"></script>
+	</head>
+	<style>
 .photo-of-day {
-	border-left: 15px solid white;
-	border-right: 15px solid white;
 	height: 100%;
 	width: auto;
+	z-index: -1;
+	position: relative;
 }
-</style>
+.img-text {
+	text-align: left;
+	z-index: 0;
+	position: relative;
+	color: white;
+	bottom: 50px;
+	left: 200px;
+	font-size: 30px
+}
+	</style>
 	<body style="background-color: black; margin: 0;">
-		<script src="photo-of-day.js"></script>
 		<div style="height: 100vh; text-align: center;">
 			<img class="photo-of-day">
+			<div class="img-text"></div>
 		</div>
 	</body>
 </html>

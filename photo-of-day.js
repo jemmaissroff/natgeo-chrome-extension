@@ -19,9 +19,16 @@ chrome.storage.sync.get('date', function(result) {
 			).then(
 				function(text) {
 					var doc = new DOMParser().parseFromString(text, "text/html")
+
+					// Setting the image to the current image of the day
 					var selected = doc.querySelector("meta[property='og:image']").getAttribute("content")
 					document.querySelector(".photo-of-day").setAttribute("src", selected);
 					chrome.storage.sync.set({ 'img-src' : selected }, function() {});
+
+					// Setting the white text under the image to the image title
+					var text = doc.querySelector("meta[property='og:title']").getAttribute("content")
+					document.querySelector(".img-text").innerText = text;
+					chrome.storage.sync.set({ 'img-text' : text}, function() {});
 
 				}
 			).catch(function(err) {
@@ -31,5 +38,8 @@ chrome.storage.sync.get('date', function(result) {
 
 	chrome.storage.sync.get('img-src', function(result) {
 		document.querySelector(".photo-of-day").setAttribute("src", result['img-src']);
+	});
+	chrome.storage.sync.get('img-text', function(result) {
+		document.querySelector(".img-text").innerText = result['img-text'];
 	});
 });
