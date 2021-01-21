@@ -2,6 +2,8 @@
 
 This is a chrome extension to display the National Geographic [photo of the day](https://www.nationalgeographic.com/photography/photo-of-the-day) every time a new tab is opened.
 
+![Squirrels](img/squirrels.png)
+
 ## Installation
 
 1. Navigate to `chrome://extensions` in chrome
